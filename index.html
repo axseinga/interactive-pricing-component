@@ -28,55 +28,77 @@
         <h1 class="heading--primary">Simple, traffic-based pricing</h1>
         <h2 class="heading--secondary">
           Sign-up for our 30-day trial. <br />
-          No credit cardrequired.
+          No credit card required.
         </h2>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="card__up">
-        <div class="card--views">100K Pageviews</div>
-        <div class="card__slider">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            class="card__slider--input"
-            id=""
-          />
+      <div class="card">
+        <div class="card__up">
+          <div class="card--views">100K Pageviews</div>
+          <div class="card__slider">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="card__slider--input"
+              id="sliderRange"
+            />
+            <p class="value">Value: <span id="demo"></span></p>
+          </div>
+          <div class="card__price">
+            <span class="card__price--bold" id="price">$16.00</span
+            ><span id="billing">/ month </span>
+          </div>
+          <div class="card__billing">
+            <span class="card__billing--option">Monthly Billing</span>
+            <label class="card__billing--switch">
+              <input type="checkbox" />
+              <span class="card__billing--slider"></span>
+            </label>
+            <span class="card__billing--option">Yearly Billing</span>
+            <span class="card__billing--discount">-25%</span>
+          </div>
         </div>
-        <div class="card__price">
-          <span class="card__price--bold" id="price">$16.00</span
-          ><span id="billing">/ month </span>
-        </div>
-        <div class="card__billing">
-          <span class="card__billing--option">Monthly Billing</span>
-          <label class="card__billing--switch">
-            <input type="checkbox" class="card__billing--checkbox" />
-            <span class="card__billing--slider"></span>
-          </label>
-          <span class="card__billing--option">Yearly Billing</span>
-          <span class="card__billing--discount">-25%</span>
+
+        <div class="card__down">
+          <ul class="card__list">
+            <li class="card__list--item">
+              <img
+                src="./images/icon-check.svg"
+                alt="Icon checked"
+                class="card__list--item--img"
+              />
+              Unlimited websites
+            </li>
+            <li class="card__list--item">
+              <img
+                src="./images/icon-check.svg"
+                alt="Icon checked"
+                class="card__list--item--img"
+              />
+              100% data ownership
+            </li>
+            <li class="card__list--item">
+              <img
+                src="./images/icon-check.svg"
+                alt="Icon checked"
+                class="card__list--item--img"
+              />
+              Email reports
+            </li>
+          </ul>
+
+          <button class="card__button">Start my trial</button>
         </div>
       </div>
-    </div>
 
-    <div class="card__down">
-      <ul class="">
-        <li class="">Unlimited websites</li>
-        <li class="">100% data ownership</li>
-        <li class="">Email reports</li>
-      </ul>
-
-      <button class="">Start my trial</button>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/axseinga">Axseinga</a>.
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/axseinga">Axseinga</a>.
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

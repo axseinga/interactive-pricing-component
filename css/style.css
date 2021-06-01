@@ -1,6 +1,183 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+  color: #858fad; }
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #fafbff;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: left -30%; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.heading {
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  text-align: center;
+  padding: 6.5rem 1rem 5rem 1rem; }
+  .heading--primary {
+    color: #293356;
+    font-weight: 800; }
+  .heading--secondary {
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding: 1rem; }
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 340px;
+  height: 500px;
+  box-shadow: -1px 13px 23px 4px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .card__up {
+    border-bottom: 1px solid #eaeefb;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem; }
+  .card__down {
+    padding: 3rem 1rem; }
+  .card--views {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    padding: 2rem 1rem; }
+  .card__slider {
+    padding: 2rem 1rem;
+    width: 95%; }
+    .card__slider--input {
+      appearance: none;
+      width: 100%;
+      height: 10px;
+      background-image: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
+      border-radius: 8px;
+      outline: none;
+      transition: 2s; }
+      .card__slider--input:hover {
+        opacity: 1; }
+      .card__slider--input::-webkit-slider-thumb {
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #10d5c2;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        box-shadow: 1px 13px 22px 1px #10d5c2; }
+  .card__price {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem; }
+    .card__price--bold {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #293356;
+      padding-right: 1rem; }
+  .card__billing {
+    font-size: 1.3rem; }
+    .card__billing--option {
+      padding: 0 0.5rem; }
+    .card__billing--switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 26px; }
+      .card__billing--switch input {
+        opacity: 0;
+        width: 0;
+        height: 0; }
+    .card__billing--slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cdd7ee;
+      border-radius: 34px;
+      transition: 1s; }
+      .card__billing--slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        bottom: 3px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: 1s; }
+    .card__billing--discount {
+      font-size: 1rem;
+      background-color: #feece7;
+      color: #ff8c66;
+      border-radius: 8px;
+      padding: 0.2rem 0.5rem; }
+  .card input:checked + .card__billing--slider {
+    background-color: #a5f3eb; }
+  .card input:focus + .card__billing--slider {
+    box-shadow: 0 0 1px #2196f3; }
+  .card input:checked + .card__billing--slider:before {
+    transform: translateX(20px); }
+  .card__list {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 1.5rem; }
+    .card__list--item {
+      list-style: none;
+      padding-bottom: 1rem; }
+      .card__list--item--img {
+        padding-right: 1rem; }
+  .card__button {
+    transition: all 0.5s; }
+    .card__button, .card__button:link, .card__button:visited {
+      width: 180px;
+      height: 40px;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.2rem;
+      background-color: #293356;
+      color: #bdccff;
+      border-radius: 10rem;
+      border: 1px solid #293356; }
+    .card__button:hover, .card__button:active {
+      color: #fff;
+      transform: scale(1.2); }
+
+.value {
+  display: none; }
+
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+  padding: 2rem; }
 
 .attribution a {
   color: #3e52a3; }
+
+.img {
+  width: 500px;
+  height: 200px; }
