@@ -34,7 +34,7 @@
 
       <div class="card">
         <div class="card__up">
-          <div class="card--views">100K Pageviews</div>
+          <div class="card--views"><span id="views">100K</span> Pageviews</div>
           <div class="card__slider">
             <input
               type="range"
@@ -47,13 +47,13 @@
             <p class="value">Value: <span id="demo"></span></p>
           </div>
           <div class="card__price">
-            <span class="card__price--bold" id="price">$16.00</span
+            <span class="card__price--bold">$<span id="price">16</span>.00</span
             ><span id="billing">/ month </span>
           </div>
           <div class="card__billing">
             <span class="card__billing--option">Monthly Billing</span>
             <label class="card__billing--switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="checkbox" />
               <span class="card__billing--slider"></span>
             </label>
             <span class="card__billing--option">Yearly Billing</span>
