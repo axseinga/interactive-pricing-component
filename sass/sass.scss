@@ -19,6 +19,10 @@ $color-white: #fff;
 // Fonts //
 $font-primary: "Manrope", sans-serif;
 
+// Breakpoints //
+
+$bp-desktop: 62.5rem;
+
 //// Styles ////
 
 *,
@@ -42,6 +46,11 @@ body {
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-position: left -30%;
+
+  @media only screen and (min-width: $bp-desktop) {
+    background-position: 0 0;
+    background-size: contain;
+  }
 }
 
 .wrapper {
@@ -49,6 +58,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: $bp-desktop) {
+    justify-items: center;
+    padding-top: 5rem;
+  }
 }
 
 .heading {
@@ -62,6 +76,10 @@ body {
   &--primary {
     color: $color-text-cta-background;
     font-weight: 800;
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 2.5rem;
+    }
   }
 
   &--secondary {
@@ -70,6 +88,10 @@ body {
     line-height: 2.5rem;
 
     padding: 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -86,6 +108,11 @@ body {
   align-items: center;
   justify-content: center;
 
+  @media only screen and (min-width: $bp-desktop) {
+    width: 600px;
+    height: 450px;
+  }
+
   &__up {
     border-bottom: 1px solid $color-empty-slider-bar;
     width: 100%;
@@ -95,10 +122,28 @@ body {
     align-items: center;
 
     padding: 3rem 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "views price"
+        "slider slider"
+        " toggle toggle";
+      justify-items: center;
+    }
   }
 
   &__down {
     padding: 3rem 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &--views {
@@ -108,11 +153,20 @@ body {
     letter-spacing: 0.2rem;
 
     padding: 2rem 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      grid-area: views;
+      font-size: 1.5rem;
+    }
   }
 
   &__slider {
     padding: 2rem 1rem;
     width: 95%;
+
+    @media only screen and (min-width: $bp-desktop) {
+      grid-area: slider;
+    }
     &--input {
       appearance: none;
       width: 100%;
@@ -134,6 +188,7 @@ body {
       }
 
       &::-webkit-slider-thumb {
+        // does not work when put together after semi colon ?
         appearance: none;
         width: 40px;
         height: 40px;
@@ -144,6 +199,22 @@ body {
         background-position: center;
         cursor: pointer;
         box-shadow: 1px 13px 22px 1px $color-slider-background;
+        border: 1px solid $color-slider-background;
+      }
+
+      &::-moz-range-thumb {
+        // does not work when put together after semi colon ?
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $color-slider-background;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        box-shadow: 1px 13px 22px 1px $color-slider-background;
+        border: 1px solid $color-slider-background;
       }
     }
   }
@@ -154,6 +225,10 @@ body {
     align-items: center;
 
     padding: 1.5rem 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      grid-area: price;
+    }
     &--bold {
       font-size: 3.5rem;
       font-weight: 800;
@@ -164,6 +239,11 @@ body {
 
   &__billing {
     font-size: 1.3rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      grid-area: toggle;
+      padding-left: 20rem;
+    }
 
     &--option {
       padding: 0 0.5rem;
@@ -212,6 +292,14 @@ body {
       color: $color-discount-text;
       border-radius: 8px;
       padding: 0.2rem 0.5rem;
+
+      &--1 {
+        display: none;
+
+        @media only screen and (min-width: $bp-desktop) {
+          display: inline-block;
+        }
+      }
     }
   }
 
@@ -231,6 +319,13 @@ body {
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 1.5rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      text-align: left;
+      align-self: center;
+      padding-bottom: 0;
+    }
+
     &--item {
       list-style: none;
       padding-bottom: 1rem;
@@ -243,6 +338,11 @@ body {
 
   &__button {
     transition: all 0.5s;
+
+    @media only screen and (min-width: $bp-desktop) {
+      align-self: center;
+    }
+
     &,
     &:link,
     &:visited {

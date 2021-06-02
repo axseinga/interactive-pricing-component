@@ -17,12 +17,20 @@ body {
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-position: left -30%; }
+  @media only screen and (min-width: 62.5rem) {
+    body {
+      background-position: 0 0;
+      background-size: contain; } }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (min-width: 62.5rem) {
+    .wrapper {
+      justify-items: center;
+      padding-top: 5rem; } }
 
 .heading {
   background-image: url(../images/pattern-circles.svg);
@@ -33,11 +41,17 @@ body {
   .heading--primary {
     color: #293356;
     font-weight: 800; }
+    @media only screen and (min-width: 62.5rem) {
+      .heading--primary {
+        font-size: 2.5rem; } }
   .heading--secondary {
     font-weight: 600;
     font-size: 1.3rem;
     line-height: 2.5rem;
     padding: 1rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .heading--secondary {
+        font-size: 1.6rem; } }
 
 .card {
   background-color: #fff;
@@ -49,6 +63,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media only screen and (min-width: 62.5rem) {
+    .card {
+      width: 600px;
+      height: 450px; } }
   .card__up {
     border-bottom: 1px solid #eaeefb;
     width: 100%;
@@ -56,17 +74,37 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 3rem 1rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__up {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "views price" "slider slider" " toggle toggle";
+        justify-items: center; } }
   .card__down {
     padding: 3rem 1rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__down {
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; } }
   .card--views {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.3rem;
     letter-spacing: 0.2rem;
     padding: 2rem 1rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card--views {
+        grid-area: views;
+        font-size: 1.5rem; } }
   .card__slider {
     padding: 2rem 1rem;
     width: 95%; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__slider {
+        grid-area: slider; } }
     .card__slider--input {
       appearance: none;
       width: 100%;
@@ -87,12 +125,28 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        box-shadow: 1px 13px 22px 1px #10d5c2; }
+        box-shadow: 1px 13px 22px 1px #10d5c2;
+        border: 1px solid #10d5c2; }
+      .card__slider--input::-moz-range-thumb {
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #10d5c2;
+        background-image: url(../images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        box-shadow: 1px 13px 22px 1px #10d5c2;
+        border: 1px solid #10d5c2; }
   .card__price {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     padding: 1.5rem 1rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__price {
+        grid-area: price; } }
     .card__price--bold {
       font-size: 3.5rem;
       font-weight: 800;
@@ -100,6 +154,10 @@ body {
       padding-right: 1rem; }
   .card__billing {
     font-size: 1.3rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__billing {
+        grid-area: toggle;
+        padding-left: 20rem; } }
     .card__billing--option {
       padding: 0 0.5rem; }
     .card__billing--switch {
@@ -137,6 +195,11 @@ body {
       color: #ff8c66;
       border-radius: 8px;
       padding: 0.2rem 0.5rem; }
+      .card__billing--discount--1 {
+        display: none; }
+        @media only screen and (min-width: 62.5rem) {
+          .card__billing--discount--1 {
+            display: inline-block; } }
   .card input:checked + .card__billing--slider {
     background-color: #a5f3eb; }
   .card input:focus + .card__billing--slider {
@@ -147,6 +210,11 @@ body {
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 1.5rem; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__list {
+        text-align: left;
+        align-self: center;
+        padding-bottom: 0; } }
     .card__list--item {
       list-style: none;
       padding-bottom: 1rem; }
@@ -154,6 +222,9 @@ body {
         padding-right: 1rem; }
   .card__button {
     transition: all 0.5s; }
+    @media only screen and (min-width: 62.5rem) {
+      .card__button {
+        align-self: center; } }
     .card__button, .card__button:link, .card__button:visited {
       width: 180px;
       height: 40px;
